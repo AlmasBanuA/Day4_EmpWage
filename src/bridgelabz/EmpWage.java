@@ -2,14 +2,18 @@ package bridgelabz;
 
 public class EmpWage {
 
-	public static void main(String[] args) {
-		int iSFullTime = 1;
+      public static void main(String[] args) {
+      int isPartTime = 2;
+      int isFullTime = 1;
+      int EmpRatePerHour = 20;
+        int empHrs = 0;
+	int totalWage = 0;
         double empcheck= Math.floor(Math.random() *10) % 2;
-        if (empcheck == iSFullTime)
-            System.out.println("Employee is present");
-        else
-            System.out.println("Employee is Absent");
-
-	}
-
+        if (empcheck == isFullTime)
+            empHrs = 8;
+	else if (empcheck == isPartTime)
+            empHrs = 4;
+        totalWage = empHrs * EmpRatePerHour;
+        System.out.println("Emp WAge: " + totalWage);
+    }
 }
